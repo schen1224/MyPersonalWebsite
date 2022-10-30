@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>contact page</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+ *{
+        margin-bottom: 5px;
+        background-color: antiquewhite;
+      }
+      form {
+        font-family: Arial;
+        color: black;
+        padding: 10px 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        
+      }
+      label[for="name"],
+      label[for="email"],label[for="email"] {
+        display: inline-block;
+        width: 70px;
+      }
+
+      form > div {
+        margin-bottom: 10px;
+      }
+      fieldset{
+        border-color: lightgray;
+      }
+      *{
+        background-color: antiquewhite;
+      }
+      form,fieldset,div,legend,label,input,textarea,select,button,img{
+        background-color: white;
+      }
+     
+    </style>
+  </head>
+  <body>
+    <h1>Contact me</h1>
+
+    <form action="https://oim-apis.herokuapp.com/form" method="POST">
+      <fieldset>
+        <legend>Your Information:</legend>
+        <div>
+          <label for="name">Name: </label>
+          <input
+            id="name"
+            maxlength="100"
+            name="name"
+            placeholder="Name"
+            type="text"
+          />
+        </div>
+        <div>
+          <label for="email">Email: </label>
+          <input
+            id="email"
+            maxlength="100"
+            name="email"
+            placeholder="Email address"
+            size="26"
+            type="email"
+          />
+        </div>
+        <div>
+            <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="width:400px"></textarea>
+        </div>
+        
+      </fieldset> 
+        <button type="submit">
+          submit
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2680/2680985.png"
+            height="30"
+            alt="submit button"
+          />
+        </button>
+      </fieldset>
+    </form>
+  </body>
+</html>

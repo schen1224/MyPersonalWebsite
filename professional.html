@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <style>
-    .header {
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>professional page</title>
+</head>
+    <style>
+         .header {
       width: 100%;
       display: flex;
       align-self: center;
@@ -44,7 +44,6 @@
       height: 40px;
       margin-top: 0;
     }
-
     p {
       line-height: 2;
    
@@ -58,45 +57,59 @@
       padding: 50px 50px 50px 50px;
       color:#343434;
     }
-    h1 {
-      margin-left: 150px;
-      margin-top: 70px;
-      font-family: Apple Chancery;
-      color: #303179;
-    }
-    #profile {
+  
+    #resume {
       float: right;
-      margin-top: -400px;
-      margin-right: 200px;
+      margin-top: -350px;
+      margin-right: 150px;
+      border: 5px solid #555;
     }
-  </style>
-  <body>
+    .button contact {
+      background-color: #fae5df;
+      border: none;
+      padding: 16px 32px;
+      text-align: center;
+      font-size: 16px;
+      opacity: 0.6;
+      transition: 0.3s;
+      display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: 16px;
+
+    
+    }
+    .button contact:hover {
+      opacity: 1;
+    }
+    </style>
+<body>
     <div class="header">
-      <img src="images/sabrina.jpg.jpg" alt="icon" width="50px" />
-      <ul>
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="interest.html">Interest</a>
-        </li>
-        <li>
-          <a href="recipe.html">Recipe</a>
-        </li>
-        <li>
-          <a href="professional.html">Professional Experiences</a>
-        </li>
-        <li>
-          <a href="bucket_list.html">Bucket list</a>
-        </li>
-        <li class="button">
-          <a href="contact.html">Contact</a>
-        </li>
-      </ul>
-    </div>
-    <img src="images/wavy.jpeg" alt="wazy line" id="wavy" />
-    <h1>Hi, welcome to Sabrina's Website...</h1>
-    <div id="text">
+        <img src="images/sabrina.jpg.jpg" alt="icon" width="50px" />
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="interest.html">Interest</a>
+          </li>
+          <li>
+            <a href="recipe.html">Recipe</a>
+          </li>
+          <li>
+            <a href="professional.html">Professional Experiences</a>
+          </li>
+          <li>
+            <a href="bucket_list.html">Bucket list</a>
+          </li>
+          <li class="button">
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <img src="images/wavy.jpeg" alt="wazy line" id="wavy" />
+      
+      <div id="text">
       <p>
         I am a Junior at Babson College, concentrating on Technology
         Entrepreneurship and Business Analytics. I have lots interests, explore
@@ -107,11 +120,14 @@
         ways to contact me in the Contact Page. Enjoy exploring mysite~
       </p>
     </div>
+    <div class="button contact">
+        Link to Linkedln
+    </div>
     <img
-      src="images/sabrina.jpg.jpg"
+      src="images/resume.png"
       alt="sabrina's profile pic"
-      width="300px"
-      id="profile"
+      width="400px"
+      id="resume"
     />
-  </body>
+</body>
 </html>

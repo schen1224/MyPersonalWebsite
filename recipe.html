@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Page</title>
+</head>
+<style>
+    .header {
+      width: 100%;
+      display: flex;
+      align-self: center;
+      justify-content: space-between;
+    }
+    .header ul li {
+      display: inline-block;
+      list-style: none;
+      margin: 10px 10px;
+    }
+    .header ul li a {
+      text-decoration: none;
+      color:#343434;
+    }
+    .button {
+      background-color: #fae5df;
+      border: none;
+      padding: 16px 32px;
+      text-align: center;
+      font-size: 16px;
+      margin: 4px 2px;
+      opacity: 0.6;
+      transition: 0.3s;
+      display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    .button:hover {
+      opacity: 1;
+    }
+    #wavy {
+      width: 1400px;
+      height: 40px;
+      margin-top: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-left: auto;
+      margin-right: auto;
+      width:1000px;
+      height:550px;
+      
+    }
+    table,
+    td,
+    th {
+      border: 1px solid lightgrey;
+      font-family: Palatino;
+      background-color: #fae5df;
+    }
+
+    td {
+      text-align: center;
+    }
+    .firstrow{
+        font-weight: bold;
+    }
+</style>
+<body>
+    <div class="header">
+        <img src="images/sabrina.jpg.jpg" alt="icon" width="50px" />
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="interest.html">Interest</a>
+          </li>
+          <li>
+            <a href="recipe.html">Recipe</a>
+          </li>
+          <li>
+            <a href="professional.html">Professional Experiences</a>
+          </li>
+          <li>
+            <a href="bucket_list.html">Bucket list</a>
+          </li>
+          <li class="button">
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <img src="images/wavy.jpeg" alt="wazy line" id="wavy" />
+    <table>
+        <tr>
+            <td class="firstrow">Name</td>
+            <td class="firstrow">Image</td>
+            <td class="firstrow">Raw Materials</td>
+            <td class="firstrow">Recommened for..</td>
+        </tr>
+        <tr>
+            <td>RED BRAISED PORK BELLY</td>
+            <td><img src="images/r1.png" alt="RED BRAISED PORK BELLY" width="200px"></td>
+            <td>1. Pork belly<br>
+                2. Cooking wine<br>
+                3. Sichuan peppercorn <br>
+                4. Rock sugar<br>
+                5. aromatics (ginger, scallion and green onion) <br>
+                6. black vinegar <br>
+                7. light soy sauce </td>
+            <td>For ppl love sweet food</td>
+        </tr>
+        <tr>
+            <td>TWICE COOKED PORK--SZECHUAN PORK STIR FRY</td>
+            <td><img src="images/r2.png" alt="TWICE COOKED PORK" width="200px"></td>
+            <td>1. Pork belly <br>
+                2. Aromatics (garlic, ginger, and scallion)<br>
+                3. Fresh peppers <br>
+                4. Garlic sprouts <br>
+                5. Doubangjiang <br>
+                6. Douchi <br>
+                7. Sichuan peppercorn <br>
+                8. Sugar<br>
+                9. Light soy sauce </td>
+            <td>Traditional sichuan food. For people love spicy pork.</td>
+        </tr>
+        <tr>
+            <td>MAPO TOFU</td>
+            <td><img src="images/r3.png" alt="MAPO TOFU" width="200px"></td>
+            <td>1. doubanjiang <br>
+                2. Dou-chi <br>
+                3. Freshly grounded Szechuan peppercorn powder <br>
+                4. Garlic greens<br>
+                5. Tofu </td>
+            <td>Served with steam rice. For people love tofu and a little bit of a spicy.</td>
+        </tr>
+        <tr>
+            <td>EGG FRIED RICE</td>
+            <td><img src="images/r4.png" alt="r4" width="200px"></td>
+            <td>1. Rice (preferably day-old or leftover), or fresh made rice can be used too.<br>
+                2. Eggs<br>
+                3. Cooking oil<br>
+                4. Salt and pepper<br>
+                5. Green onions<br>
+                6. soy sauce</td>
+            <td>Great source for carbon and protein. Great choice for people do not love spicy food</td>
+        </tr>
+    </table>
+</body>
+</html>
