@@ -1,1 +1,0 @@
-This is Sabrina's personal website. [Click Here to the actual website](http://www.sabrinac.me/)
