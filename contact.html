@@ -4,21 +4,69 @@
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>contact page</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <style>
+       .header {
+      width: 100%;
+      display: flex;
+      align-self: center;
+      justify-content: space-between;
+    }
+    .header ul li {
+      display: inline-block;
+      list-style: none;
+      margin: 10px 10px;
+    }
+    .header ul li a {
+      text-decoration: none;
+      color:#343434;
+    }
+
+    .header ul li a:hover{
+      text-decoration: underline;
+      color:black;
+    }
+    .button {
+      background-color: #fae5df;
+      border: none;
+      padding: 16px 32px;
+      text-align: center;
+      font-size: 16px;
+      margin: 4px 2px;
+      opacity: 0.6;
+      transition: 0.3s;
+      display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    .button:hover {
+      opacity: 1;
+    }
+    #wavy {
+      width: 1400px;
+      height: 40px;
+      margin-top: 0;
+    }
+    #icon{
+      height:50px;
+      margin-top: 30px;
+    }
       h1 {
         text-align: center;
-      }
- *{
-        margin-bottom: 5px;
-        background-color: antiquewhite;
+        font-family: Apple Chancery;
+        color: #343434;
       }
       form {
         font-family: Arial;
-        color: black;
+        color: #343434;
         padding: 10px 20px;
         margin-left: auto;
         margin-right: auto;
-        width: 60%;
+        width: 50%;
         
       }
       label[for="name"],
@@ -26,23 +74,54 @@
         display: inline-block;
         width: 70px;
       }
-
-      form > div {
-        margin-bottom: 10px;
+      form div{
+        margin-top: 20px;
       }
       fieldset{
         border-color: lightgray;
       }
-      *{
-        background-color: antiquewhite;
+      button{
+        margin-left: 320px;
+        margin-top: 20px;
       }
-      form,fieldset,div,legend,label,input,textarea,select,button,img{
-        background-color: white;
+      button:hover{
+        opacity: 1;
       }
+      footer {
+      text-align: center;
+      padding: 3px;
+      background-color: #fae5df;
+      color: #343434;
+      margin-top: 200px;
+    }
      
     </style>
   </head>
   <body>
+    <div class="header">
+      <img src="images/icon.png" id='icon' alt="icon" />
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="interest.html">Interest</a>
+        </li>
+        <li>
+          <a href="recipe.html">Recipe</a>
+        </li>
+        <li>
+          <a href="professional.html">Professional Experiences</a>
+        </li>
+        <li>
+          <a href="bucket_list.html">Bucket list</a>
+        </li>
+        <li class="button">
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <img src="images/wavy.jpeg" alt="wazy line" id="wavy" />
     <h1>Contact me</h1>
 
     <form action="https://oim-apis.herokuapp.com/form" method="POST">
@@ -54,7 +133,7 @@
             id="name"
             maxlength="100"
             name="name"
-            placeholder="Name"
+            placeholder="What's your name?"
             type="text"
           />
         </div>
@@ -64,26 +143,32 @@
             id="email"
             maxlength="100"
             name="email"
-            placeholder="Email address"
+            placeholder="What's your email address"
             size="26"
             type="email"
           />
         </div>
         <div>
-            <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="width:400px"></textarea>
+            <label for="subject">Subject:</label>
+    <textarea id="subject" name="subject" placeholder="Write something.."  style="width:300px"></textarea>
         </div>
         
       </fieldset> 
         <button type="submit">
-          submit
           <img
             src="https://cdn-icons-png.flaticon.com/512/2680/2680985.png"
-            height="30"
+            height="50"
             alt="submit button"
           />
         </button>
       </fieldset>
     </form>
+    <footer>
+      <p>
+        All Rights Reserved to Author: Sabrina Chen<br />
+        <a href="index.html">Home Page</a>
+        <br>
+        <a href="sitemap.html">Sitemap</a></p>
+    </footer>
   </body>
 </html>

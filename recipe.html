@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Page</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 </head>
 <style>
-    .header {
+   .header {
       width: 100%;
       display: flex;
       align-self: center;
@@ -21,6 +25,11 @@
     .header ul li a {
       text-decoration: none;
       color:#343434;
+    }
+
+    .header ul li a:hover{
+      text-decoration: underline;
+      color:black;
     }
     .button {
       background-color: #fae5df;
@@ -44,7 +53,17 @@
       height: 40px;
       margin-top: 0;
     }
+    #icon{
+      height:50px;
+      margin-top: 30px;
+    }
+    h1{
+      text-align: center;
+      color: #343434;
+      font-family: Palatino;
+    }
     table {
+      margin-top: 50px;
       border-collapse: collapse;
       margin-left: auto;
       margin-right: auto;
@@ -66,10 +85,17 @@
     .firstrow{
         font-weight: bold;
     }
+    footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #fae5df;
+  color: #343434;
+  margin-top: 60px;
+}
 </style>
 <body>
     <div class="header">
-        <img src="images/sabrina.jpg.jpg" alt="icon" width="50px" />
+      <img src="images/icon.png" id='icon' alt="icon" />
         <ul>
           <li>
             <a href="index.html">Home</a>
@@ -92,6 +118,7 @@
         </ul>
       </div>
       <img src="images/wavy.jpeg" alt="wazy line" id="wavy" />
+      <h1>Here are some recipes of traditional dishes in Sichuan, China...</h1>
     <table>
         <tr>
             <td class="firstrow">Name</td>
@@ -109,7 +136,7 @@
                 5. aromatics (ginger, scallion and green onion) <br>
                 6. black vinegar <br>
                 7. light soy sauce </td>
-            <td>For ppl love sweet food</td>
+            <td>For people love sweet food and pork</td>
         </tr>
         <tr>
             <td>TWICE COOKED PORK--SZECHUAN PORK STIR FRY</td>
@@ -147,5 +174,12 @@
             <td>Great source for carbon and protein. Great choice for people do not love spicy food</td>
         </tr>
     </table>
+    <footer>
+      <p>All Rights Reserved to Author: Sabrina Chen<br>
+        Pictures are cited from <a href="https://www.chinasichuanfood.com/">China Sichuan Food</a><br>
+        <a href="contact.html">Contact Me</a><br>
+        <a href="sitemap.html">Sitemap</a></p>
+
+    </footer>
 </body>
 </html>

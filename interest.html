@@ -5,8 +5,189 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interest Page</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 </head>
+<style>
+    .header {
+      width: 100%;
+      display: flex;
+      align-self: center;
+      justify-content: space-between;
+    }
+    .header ul li {
+      display: inline-block;
+      list-style: none;
+      margin: 10px 10px;
+    }
+    .header ul li a {
+      text-decoration: none;
+      color:#343434;
+    }
+
+    .header ul li a:hover{
+      text-decoration: underline;
+      color:black;
+    }
+    .button {
+      background-color: #fae5df;
+      border: none;
+      padding: 16px 32px;
+      text-align: center;
+      font-size: 16px;
+      margin: 4px 2px;
+      opacity: 0.6;
+      transition: 0.3s;
+      display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    .button:hover {
+      opacity: 1;
+    }
+    #wavy {
+      width: 1400px;
+      height: 40px;
+      margin-top: 0;
+    }
+    #icon{
+      height:50px;
+      margin-top: 30px;
+    }
+
+    footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #fae5df;
+  color: #343434;
+  margin-top: 1800px;
+}
+
+  div.gallery {
+    margin: 30px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 300px;
+    margin-left: 100px;
+  }
+
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+
+  div.desc {
+    padding: 15px;
+    text-align: center;
+    font-family: Palatino;
+  }
+  h1{
+    font-family: Palatino;
+    color:#343434;
+  }
+
+</style>
 <body>
-    
+    <div class="header">
+        <img src="images/icon.png" id='icon' alt="icon" />
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="interest.html">Interest</a>
+          </li>
+          <li>
+            <a href="recipe.html">Recipe</a>
+          </li>
+          <li>
+            <a href="professional.html">Professional Experiences</a>
+          </li>
+          <li>
+            <a href="bucket_list.html">Bucket list</a>
+          </li>
+          <li class="button">
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <img src="images/wavy.jpeg" alt="wazy line" id="wavy" title="wavy" />
+
+     <h1>Click the image to explore more about the interest...</h1>
+    <div class="gallery">
+      <a target="_blank" href="https://www.cookingchanneltv.com/">
+        <img src="images/cooking.jpg" alt="cooking" title='cooking'width="600" height="400">
+      </a>
+      <div class="desc">I love cooking! It is super relaxing and fun when I cook with friends.</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="https://www.alltrails.com/us/massachusetts/wellesley">
+        <img src="images/hiking.jpg" alt="hiking" title='hiking'width="600" height="400">
+      </a>
+      <div class="desc">I go to hiking when the weather is nice.</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="https://www.purina.com/cats/cat-breeds">
+        <img src="images/cat.jpg" alt="cat" title='cat'width="600" height="400">
+      </a>
+      <div class="desc">I love my cat. His name is Orange. He has a cold personality which I think is cool.</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="https://www.muscleandfitness.com/workouts/workout-routines/30-exercises-should-be-your-fitness-routine/">
+        <img src="images/exercise.jpg" title='exercise'alt="exercise" width="600" height="400">
+      </a>
+      <div class="desc">Going to gym makes me energetic for the entire day! </div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="https://www.tennis.com/">
+        <img src="images/tennis.jpg" title='tennis'alt="tennis" width="600" height="400">
+      </a>
+      <div class="desc">Playing tennis with friend is so much fun! </div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="https://www.skimag.com/ski-resort-life/resort-guide-2022/best-ski-resorts-east-coast/">
+        <img src="images/skiing.JPG" title='skiing'alt="skiing" width="600" height="400">
+      </a>
+      <div class="desc">Skiing is the best winter outdoor exercise ever!</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="https://www.expedia.com/?langid=1033&semcid=US.B.GOOGLE.BT-c-EN.GENERIC&semdtl=a117867747988.b1139212372133.r1.g1kwd-12677131.i1.d1613014207559.e1c.j19002079.k1.f1.n1.l1g.h1e.m1&gclid=Cj0KCQjwwfiaBhC7ARIsAGvcPe6HfieONixbjffIHUjAE-bJhYxbISRBi6-YoAujvqQmGG66wtCGvpIaAkS-EALw_wcB">
+        <img src="images/traveling.jpg" title='traveling'alt="traveling" width="600" height="400">
+      </a>
+      <div class="desc">I have been to 15 countries. Looking forward to explore more places and cultures! </div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="https://www.youtube.com/watch?v=0ANLBX2EgmM">
+        <img src="images/sunset.JPG" title='sunset'alt="sunet" width="600" height="400">
+      </a>
+      <div class="desc">Watching sunset and sunrise with family and friends is the best part of a day!</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="https://cherryspringsstatepark.com/">
+        <img src="images/stargazing.jpg" title='stargazing'alt="stargazing" width="600" height="400">
+      </a>
+      <div class="desc">I love stargazing. The picture is taken at Cherry Spring State Park. Best spot in the east coast </div>
+    </div>
+       
+    <footer>
+        <p>All Rights Reserved to Author: Sabrina Chen<br>
+          <a href="contact.html">Contact Me</a><br>
+          <a href="sitemap.html">Sitemap</a></p>
+      </footer>
 </body>
 </html>

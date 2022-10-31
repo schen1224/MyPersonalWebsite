@@ -5,45 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>professional page</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 </head>
-    <style>
-         .header {
-      width: 100%;
-      display: flex;
-      align-self: center;
-      justify-content: space-between;
-    }
-    .header ul li {
-      display: inline-block;
-      list-style: none;
-      margin: 10px 10px;
-    }
-    .header ul li a {
-      text-decoration: none;
-      color:#343434;
-    }
-    .button {
-      background-color: #fae5df;
-      border: none;
-      padding: 16px 32px;
-      text-align: center;
-      font-size: 16px;
-      margin: 4px 2px;
-      opacity: 0.6;
-      transition: 0.3s;
-      display: inline-block;
-      text-decoration: none;
-      cursor: pointer;
-      border-radius: 50%;
-    }
-    .button:hover {
-      opacity: 1;
-    }
-    #wavy {
-      width: 1400px;
-      height: 40px;
-      margin-top: 0;
-    }
+<style>
+.header {
+  width: 100%;
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+}
+.header ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 10px;
+}
+.header ul li a {
+  text-decoration: none;
+  color:#343434;
+}
+
+.header ul li a:hover{
+  text-decoration: underline;
+  color:black;
+}
+.button {
+  background-color: #fae5df;
+  border: none;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.button:hover {
+  opacity: 1;
+}
+#wavy {
+  width: 1400px;
+  height: 40px;
+  margin-top: 0;
+}
+#icon{
+  height:50px;
+  margin-top: 30px;
+}
     p {
       line-height: 2;
    
@@ -54,38 +67,31 @@
       width: 500px;
       border: 1px solid white;
       margin-left: 100px;
+      margin-top:80px;
       padding: 50px 50px 50px 50px;
       color:#343434;
     }
   
     #resume {
       float: right;
-      margin-top: -350px;
+      margin-top: -450px;
       margin-right: 150px;
       border: 5px solid #555;
     }
-    .button contact {
-      background-color: #fae5df;
-      border: none;
-      padding: 16px 32px;
-      text-align: center;
-      font-size: 16px;
-      opacity: 0.6;
-      transition: 0.3s;
-      display: inline-block;
-      text-decoration: none;
-      cursor: pointer;
-      border-radius: 16px;
-
-    
+    #linkdeln{
+      margin-left:250px;
     }
-    .button contact:hover {
-      opacity: 1;
-    }
+    footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #fae5df;
+  color: #343434;
+  margin-top: 200px;
+}
     </style>
 <body>
     <div class="header">
-        <img src="images/sabrina.jpg.jpg" alt="icon" width="50px" />
+      <img src="images/icon.png" id='icon' alt="icon" />
         <ul>
           <li>
             <a href="index.html">Home</a>
@@ -120,14 +126,20 @@
         ways to contact me in the Contact Page. Enjoy exploring mysite~
       </p>
     </div>
-    <div class="button contact">
-        Link to Linkedln
-    </div>
+    <p id="linkdeln">
+        Find me on Linkedln: <a href="https://www.linkedin.com/in/siqi-sabrina-chen-7010a2209/">Linkedln</a>
+    </p>
     <img
       src="images/resume.png"
       alt="sabrina's profile pic"
       width="400px"
       id="resume"
+      title="Sabrina'Resume"
     />
+    <footer>
+      <p>All Rights Reserved to Author: Sabrina Chen<br>
+        <a href="contact.html">Contact Me</a><br>
+        <a href="sitemap.html">Sitemap</a></p>
+    </footer>
 </body>
 </html>
