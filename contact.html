@@ -124,7 +124,7 @@
     <img src="images/wavy.jpeg" alt="wazy line" id="wavy" />
     <h1>Contact me</h1>
 
-    <form action="https://oim-apis.herokuapp.com/form" method="POST">
+    <form action="https://oim-apis.herokuapp.com/form" method="POST" name="myForm">
       <fieldset>
         <legend>Your Information:</legend>
         <div>
@@ -132,7 +132,7 @@
           <input
             id="name"
             maxlength="100"
-            name="name"
+            name="fname"
             placeholder="What's your name?"
             type="text"
           />
@@ -142,7 +142,7 @@
           <input
             id="email"
             maxlength="100"
-            name="email"
+            name="fname"
             placeholder="What's your email address"
             size="26"
             type="email"
@@ -150,7 +150,7 @@
         </div>
         <div>
             <label for="subject">Subject:</label>
-    <textarea id="subject" name="subject" placeholder="Write something.."  style="width:300px"></textarea>
+    <textarea id="subject" name="fname" placeholder="Write something.."  style="width:300px"></textarea>
         </div>
         
       </fieldset> 
@@ -170,5 +170,14 @@
         <br>
         <a href="sitemap.html">Sitemap</a></p>
     </footer>
+    <script>
+      function validateForm() {
+      let x = document.forms["myForm"]["fname"].value;
+      if (x == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+      }
+    </script>
   </body>
 </html>

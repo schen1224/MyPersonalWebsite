@@ -87,8 +87,36 @@
     }
     #profile {
       float: right;
-      margin-top: -400px;
+      margin-top: -645px;
       margin-right: 200px;
+    }
+    #slideshow {
+      margin-left: 230px;
+    }
+    .btn button {
+      background-color: #fae5df;
+      border: none;
+      color: #343434;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      margin: 4px 2px;
+      cursor: pointer;
+      margin-left: 20px;
+      border-radius: 70%;
+      height: 100px;
+    }
+    .btn button:hover {
+      box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+    .btn {
+      margin-left: 250px;
+    }
+    #volume{
+      margin-left: 150px;
     }
   </style>
   <body>
@@ -116,31 +144,74 @@
       </ul>
     </div>
     <img src="images/wavy.jpeg" alt="wazy line" id="wavy" />
-    <h1>Hi, welcome to Sabrina's Website...</h1>
+    <h1>Hi, welcome to Sabrina's Website...</h1><img src="images/volume_icon.png" alt="volume" width="20px" id="volume">
     <div id="text">
       <p>
-        I am a Junior at Babson College, concentrating on Technology
-        Entrepreneurship and Business Analytics. I have lots interests, explore
-        than in my Interest Page. Want to know some authentic Chinese food
-        recipe? Go to my Recipe Page. My professional experiences and future
-        bucket list are in the corresponding pages. Don't hesitate to contact me
-        if you have any questions or want to make a friend with me! You can find
-        ways to contact me in the Contact Page. Enjoy exploring mysite~
+        My name is <strong>Sabrina</strong>. I am a Junior at
+        <strong>Babson College</strong>, concentrating on Technology
+        Entrepreneurship and Business Analytics. <br /><br />I have lots
+        interests, explore than in my Interest Page. <br /><br />Want to know
+        some authentic Chinese food recipe? Go to my Recipe Page. <br /><br />My
+        professional experiences and future bucket list are in the corresponding
+        pages.<br /><br />
+        Don't hesitate to contact me if you have any questions or want to make a
+        friend with me! You can find ways to contact me in the Contact Page.
+        <br /><br />Enjoy exploring mysite~
       </p>
     </div>
     <img
       src="images/sabrina.jpg.jpg"
       alt="sabrina's profile pic"
-      width="300px"
+      width="400px"
       id="profile"
       title="profile"
     />
+    <h1>Places I love the most...</h1>
+    <img src="" alt="" id="slideshow" width="1000px" id="slideshow" />
+    <h1>Click the buttons to explore more...</h1>
+    <div class="btn">
+      <button onclick="location.href='interest.html'" type="button">Interest</button>
+      <button onclick="location.href='recipe.html'" type="button">Recipe</button>
+      <button onclick="location.href='professional.html'" type="button">Resume</button>
+      <button onclick="location.href='bucket_list.html'" type="button">Bucket List</button>
+      <button onclick="location.href='contact.html'" type="button">Contact Me</button>
+    </div>
     <footer>
       <p>
         All Rights Reserved to Author: Sabrina Chen<br />
         <a href="contact.html">Contact Me</a>
-        <br>
-        <a href="sitemap.html">Sitemap</a></p>
+        <br />
+        <a href="sitemap.html">Sitemap</a>
+      </p>
     </footer>
+    <script>
+      const slides = [
+        "https://entrepreneurship.babson.edu/wp-content/uploads/2020/05/babson-open-feature.jpg",
+        "https://media.cntraveler.com/photos/5b1a9b8408618014c567f2f2/16:9/w_4000,h_2250,c_limit/Chengdu%20China_GettyImages-510901343.jpg",
+        "https://www.history.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTkyNDQ5NzY0ODY2OTI1OTgw/gettyimages-1395722285.jpg",
+      ];
+
+      let i = 0;
+      function slideshow() {
+        const myImage = document.getElementById("slideshow");
+        if (i === slides.length) {
+          i = 0;
+        }
+        myImage.src = slides[i];
+        i++;
+
+        setTimeout("slideshow()", 3000);
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        slideshow();
+      });
+
+      function display_audio(){
+        audio = new Audio("audio/Jets - Oh Judy.mp3");
+      }
+      document.getElementById("volume").addEventListener("click", function() {
+        display_audio();
+      });
+    </script>
   </body>
 </html>

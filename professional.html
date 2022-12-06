@@ -57,31 +57,31 @@
   height:50px;
   margin-top: 30px;
 }
-    p {
+p {
       line-height: 2;
    
       font-family: Palatino;
-    }
-    #text {
+}
+#text {
       background-color: #fae5df;
       width: 500px;
       border: 1px solid white;
-      margin-left: 100px;
+      margin-left: 400px;
       margin-top:80px;
       padding: 50px 50px 50px 50px;
       color:#343434;
     }
   
-    #resume {
-      float: right;
-      margin-top: -450px;
-      margin-right: 150px;
-      border: 5px solid #555;
+#resume {
+      /* float: right; */
+      margin-top: 50px;
+      margin-left: 500px;
+      /* border: 5px solid #555; */
     }
-    #linkdeln{
+#linkdeln{
       margin-left:250px;
     }
-    footer {
+footer {
   text-align: center;
   padding: 3px;
   background-color: #fae5df;
@@ -124,11 +124,11 @@
         bucket list are in the corresponding pages. Don't hesitate to contact me
         if you have any questions or want to make a friend with me! You can find
         ways to contact me in the Contact Page. Enjoy exploring mysite~
-      </p>
-    </div>
-    <p id="linkdeln">
+      </p> <p id="linkdeln">
         Find me on Linkedln: <a href="https://www.linkedin.com/in/siqi-sabrina-chen-7010a2209/">Linkedln</a>
     </p>
+    </div>
+   
     <img
       src="images/resume.png"
       alt="sabrina's profile pic"
@@ -141,5 +141,29 @@
         <a href="contact.html">Contact Me</a><br>
         <a href="sitemap.html">Sitemap</a></p>
     </footer>
+    <script>
+      
+        function enlarge() {
+        const currWidth = document.getElementById("resume").clientWidth;
+        const currHeight = document.getElementById("resume").clientHeight;
+        document.getElementById("resume").style.width = currWidth * 1.25 + "px";
+        document.getElementById("resume").style.height = currHeight * 1.25 + "px";
+      }
+
+      function squeeze() {
+        const currWidth = document.getElementById("resume").clientWidth;
+        const currHeight = document.getElementById("resume").clientHeight;
+        document.getElementById("resume").style.width = currWidth / 1.25 + "px";
+        document.getElementById("resume").style.height = currHeight / 1.25 + "px";
+      }
+
+      document.getElementById("resume").addEventListener("mouseover", function () {
+        enlarge();
+      });
+      document.getElementById("resume").addEventListener("mouseout", function () {
+        squeeze();
+      });
+    </script>
+
 </body>
 </html>
