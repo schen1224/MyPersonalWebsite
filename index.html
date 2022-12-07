@@ -11,6 +11,7 @@
     <link rel="manifest" href="/site.webmanifest" />
   </head>
   <style>
+
     .header {
       width: 100%;
       display: flex;
@@ -49,7 +50,8 @@
       opacity: 1;
     }
     #wavy {
-      width: 1400px;
+      width: 100%;
+      overflow:auto;
       height: 40px;
       margin-top: 0;
     }
@@ -64,6 +66,8 @@
       background-color: #fae5df;
       color: #343434;
       margin-top: 60px;
+      width: 100%;
+      overflow: auto;
     }
 
     p {
@@ -73,25 +77,30 @@
     }
     #text {
       background-color: #fae5df;
-      width: 500px;
       border: 1px solid white;
-      margin-left: 100px;
+      margin: auto;
+      width: 50%;
       padding: 50px 50px 50px 50px;
       color: #343434;
     }
     h1 {
-      margin-left: 150px;
+      margin-left: 10%;
       margin-top: 70px;
       font-family: Apple Chancery;
       color: #303179;
     }
     #profile {
-      float: right;
-      margin-top: -645px;
-      margin-right: 200px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 30%;
+      
     }
     #slideshow {
-      margin-left: 230px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
     }
     .btn button {
       background-color: #fae5df;
@@ -113,7 +122,8 @@
         0 17px 50px 0 rgba(0, 0, 0, 0.19);
     }
     .btn {
-      margin-left: 250px;
+      margin: auto;
+      width: 50%;
     }
     #volume {
       margin-left: 150px;
@@ -123,9 +133,9 @@
     }
 
     /* creating the hamburger */
-    .toggle_button{
+    .toggle-button{
       position:absolute;
-      top:.75rem;
+      top:0.75rem;
       right:1rem;
       display:none;
       flex-direction:column;
@@ -134,7 +144,7 @@
       height:21px;
     }
 
-    .toggle_button .bar{
+    .toggle-button .bar{
       height:3px;
       width:100px;
       background-color:#343434;
@@ -142,38 +152,41 @@
     } 
     /* mobile compatible */
     @media (max-width: 500px) {
-      .toggle_button{
+      .toggle-button{
         display:flex;
       }
       .header { 
         display:none;
         width:100%;
-      }
-      .header ul li {
-        text-align: center;
-      }
+      }  
       .navbar{
         flex-direction:column;
         align-items: flex-start;
       }
-      .heard ul{
+      
+      .header ul{
         width:100%;
         flex-direction:column;
       }
+      .header li {
+        text-align: center;
+      }
+      
       .header.active{
         display:flex;
       }
     }
   </style>
   <body>
-    <nav class="navbar">
-      <div class="header">
-        <img src="images/icon.png" id="icon" alt="icon" title="wavy" />
-        <a href="#" class="toggle-button">
+    <nav class="navbar"> 
+      <a href="#" class="toggle-button">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
         </a>
+      <div class="header">
+        <img src="images/icon.png" id="icon" alt="icon" title="wavy" />
+       
         <ul>
           <li>
             <a href="index.html">Home</a>
@@ -213,6 +226,7 @@
         <br /><br />Enjoy exploring mysite~
       </p>
     </div>
+    <h1>My profile pic...</h1>
     <img
       src="images/sabrina.jpg.jpg"
       alt="sabrina's profile pic"
@@ -235,9 +249,6 @@
       </button>
       <button onclick="location.href='bucket_list.html'" type="button">
         Bucket List
-      </button>
-      <button onclick="location.href='contact.html'" type="button">
-        Contact Me
       </button>
     </div>
     <footer>
@@ -269,7 +280,7 @@
       document.addEventListener("DOMContentLoaded", function () {
         slideshow();
       });
-      audio = new Audio("audio/Jets - Oh Judy.mp3");
+      audio = new Audio("audio/intro.m4a");
       function display_audio() {
         audio.paused ? audio.play() : audio.pause();
       }

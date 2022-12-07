@@ -94,33 +94,83 @@
       color: #343434;
       margin-top: 200px;
     }
-     
-    </style>
-  </head>
+    /* creating the hamburger */
+    .toggle-button{
+      position:absolute;
+      top:0.75rem;
+      right:1rem;
+      display:none;
+      flex-direction:column;
+      justify-content: space-between;
+      width:30px;
+      height:21px;
+    }
+
+    .toggle-button .bar{
+      height:3px;
+      width:100px;
+      background-color:#343434;
+      border-radius:10px;
+    } 
+    /* mobile compatible */
+    @media (max-width: 500px) {
+      .toggle-button{
+        display:flex;
+      }
+      .header { 
+        display:none;
+        width:100%;
+      }  
+      .navbar{
+        flex-direction:column;
+        align-items: flex-start;
+      }
+      
+      .header ul{
+        width:100%;
+        flex-direction:column;
+      }
+      .header li {
+        text-align: center;
+      }
+      
+      .header.active{
+        display:flex;
+      }
+    }
+  </style>
   <body>
-    <div class="header">
-      <img src="images/icon.png" id='icon' alt="icon" />
-      <ul>
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="interest.html">Interest</a>
-        </li>
-        <li>
-          <a href="recipe.html">Recipe</a>
-        </li>
-        <li>
-          <a href="professional.html">Professional Experiences</a>
-        </li>
-        <li>
-          <a href="bucket_list.html">Bucket list</a>
-        </li>
-        <li class="button">
-          <a href="contact.html">Contact</a>
-        </li>
-      </ul>
-    </div>
+    <nav class="navbar"> 
+      <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+      <div class="header">
+        <img src="images/icon.png" id="icon" alt="icon" title="wavy" />
+       
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="interest.html">Interest</a>
+          </li>
+          <li>
+            <a href="recipe.html">Recipe</a>
+          </li>
+          <li>
+            <a href="professional.html">Professional Experiences</a>
+          </li>
+          <li>
+            <a href="bucket_list.html">Bucket list</a>
+          </li>
+          <li class="button">
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <img src="images/wavy.jpeg" alt="wazy line" id="wavy" />
     <h1>Contact me</h1>
 
@@ -180,6 +230,11 @@
         return false;
       }
       }
+      const toggleButton=document.getElementsByClassName("toggle-button")[0];
+      const headerEl=document.getElementsByClassName('header')[0];
+      toggleButton.addEventListener('click',()=>{
+        headerEl.classList.toggle('active')
+      })
     </script>
   </body>
 </html>
