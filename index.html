@@ -115,153 +115,90 @@
     .btn {
       margin-left: 250px;
     }
-    #volume{
+    #volume {
       margin-left: 150px;
     }
-    #volume:hover{
+    #volume:hover {
       cursor: pointer;
     }
-/* mobile compatible */
-    @media (min-width: 500px){
 
-      .header {
-      width: 100%;
-      display: flex;
-      align-self: center;
+    /* creating the hamburger */
+    .toggle_button{
+      position:absolute;
+      top:.75rem;
+      right:1rem;
+      display:none;
+      flex-direction:column;
       justify-content: space-between;
-    }
-    .header ul li {
-      display: inline-block;
-      list-style: none;
-      margin: 10px 10px;
-    }
-    .header ul li a {
-      text-decoration: none;
-      color: #343434;
+      width:30px;
+      height:21px;
     }
 
-    .header ul li a:hover {
-      text-decoration: underline;
-      color: black;
-    }
-    .button {
-      background-color: #fae5df;
-      border: none;
-      padding: 16px 32px;
-      text-align: center;
-      font-size: 16px;
-      margin: 4px 2px;
-      opacity: 0.6;
-      transition: 0.3s;
-      display: inline-block;
-      text-decoration: none;
-      cursor: pointer;
-      border-radius: 50%;
-    }
-    .button:hover {
-      opacity: 1;
-    }
-    #wavy {
-      width: 1400px;
-      height: 40px;
-      margin-top: 0;
-    }
-    #icon {
-      height: 50px;
-      margin-top: 30px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 3px;
-      background-color: #fae5df;
-      color: #343434;
-      margin-top: 60px;
-    }
-
-    p {
-      line-height: 2;
-
-      font-family: Palatino;
-    }
-    #text {
-      background-color: #fae5df;
-      width: 500px;
-      border: 1px solid white;
-      margin-left: 100px;
-      padding: 50px 50px 50px 50px;
-      color: #343434;
-    }
-    h1 {
-      margin-left: 150px;
-      margin-top: 70px;
-      font-family: Apple Chancery;
-      color: #303179;
-    }
-    #profile {
-      float: right;
-      margin-top: -645px;
-      margin-right: 200px;
-    }
-    #slideshow {
-      margin-left: 230px;
-    }
-    .btn button {
-      background-color: #fae5df;
-      border: none;
-      color: #343434;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 20px;
-      margin: 4px 2px;
-      cursor: pointer;
-      margin-left: 20px;
-      border-radius: 70%;
-      height: 100px;
-    }
-    .btn button:hover {
-      box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-        0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    }
-    .btn {
-      margin-left: 250px;
-    }
-    #volume{
-      margin-left: 150px;
-    }
-    #volume:hover{
-      cursor: pointer;
-    }
+    .toggle_button .bar{
+      height:3px;
+      width:100px;
+      background-color:#343434;
+      border-radius:10px;
+    } 
+    /* mobile compatible */
+    @media (max-width: 500px) {
+      .toggle_button{
+        display:flex;
+      }
+      .header { 
+        display:none;
+        width:100%;
+      }
+      .header ul li {
+        text-align: center;
+      }
+      .navbar{
+        flex-direction:column;
+        align-items: flex-start;
+      }
+      .heard ul{
+        width:100%;
+        flex-direction:column;
+      }
+      .header.active{
+        display:flex;
+      }
     }
   </style>
   <body>
-    <div class="header">
-      <img src="images/icon.png" id="icon" alt="icon" title="wavy" />
-      <ul>
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="interest.html">Interest</a>
-        </li>
-        <li>
-          <a href="recipe.html">Recipe</a>
-        </li>
-        <li>
-          <a href="professional.html">Professional Experiences</a>
-        </li>
-        <li>
-          <a href="bucket_list.html">Bucket list</a>
-        </li>
-        <li class="button">
-          <a href="contact.html">Contact</a>
-        </li>
-      </ul>
-    </div>
+    <nav class="navbar">
+      <div class="header">
+        <img src="images/icon.png" id="icon" alt="icon" title="wavy" />
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="interest.html">Interest</a>
+          </li>
+          <li>
+            <a href="recipe.html">Recipe</a>
+          </li>
+          <li>
+            <a href="professional.html">Professional Experiences</a>
+          </li>
+          <li>
+            <a href="bucket_list.html">Bucket list</a>
+          </li>
+          <li class="button">
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <img src="images/wavy.jpeg" alt="wazy line" id="wavy" />
-    <h1>Hi, welcome to Sabrina's Website...</h1><img src="images/volume_icon.png" alt="volume" width="20px" id="volume">
+    <h1>Hi, welcome to Sabrina's Website...</h1>
+    <img src="images/volume_icon.png" alt="volume" width="20px" id="volume" />
     <div id="text">
       <p>
         My name is <strong>Sabrina</strong>. I am a Junior at
@@ -287,11 +224,21 @@
     <img src="" alt="" id="slideshow" width="1000px" id="slideshow" />
     <h1>Click the buttons to explore more...</h1>
     <div class="btn">
-      <button onclick="location.href='interest.html'" type="button">Interest</button>
-      <button onclick="location.href='recipe.html'" type="button">Recipe</button>
-      <button onclick="location.href='professional.html'" type="button">Resume</button>
-      <button onclick="location.href='bucket_list.html'" type="button">Bucket List</button>
-      <button onclick="location.href='contact.html'" type="button">Contact Me</button>
+      <button onclick="location.href='interest.html'" type="button">
+        Interest
+      </button>
+      <button onclick="location.href='recipe.html'" type="button">
+        Recipe
+      </button>
+      <button onclick="location.href='professional.html'" type="button">
+        Resume
+      </button>
+      <button onclick="location.href='bucket_list.html'" type="button">
+        Bucket List
+      </button>
+      <button onclick="location.href='contact.html'" type="button">
+        Contact Me
+      </button>
     </div>
     <footer>
       <p>
@@ -323,15 +270,18 @@
         slideshow();
       });
       audio = new Audio("audio/Jets - Oh Judy.mp3");
-      function display_audio(){
-       
+      function display_audio() {
         audio.paused ? audio.play() : audio.pause();
       }
-      document.getElementById("volume").addEventListener("click", function() {
+      document.getElementById("volume").addEventListener("click", function () {
         display_audio();
       });
 
-
+      const toggleButton=document.getElementsByClassName("toggle-button")[0];
+      const headerEl=document.getElementsByClassName('header')[0];
+      toggleButton.addEventListener('click',()=>{
+        headerEl.classList.toggle('active')
+      })
     </script>
   </body>
 </html>

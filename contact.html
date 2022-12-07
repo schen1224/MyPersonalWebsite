@@ -132,7 +132,7 @@
           <input
             id="name"
             maxlength="100"
-            name="fname"
+            name="name"
             placeholder="What's your name?"
             type="text"
           />
@@ -142,7 +142,7 @@
           <input
             id="email"
             maxlength="100"
-            name="fname"
+            name="email"
             placeholder="What's your email address"
             size="26"
             type="email"
@@ -150,7 +150,7 @@
         </div>
         <div>
             <label for="subject">Subject:</label>
-    <textarea id="subject" name="fname" placeholder="Write something.."  style="width:300px"></textarea>
+    <textarea id="subject" name="subject" placeholder="Write something.."  style="width:300px"></textarea>
         </div>
         
       </fieldset> 
@@ -172,8 +172,10 @@
     </footer>
     <script>
       function validateForm() {
-      let x = document.forms["myForm"]["fname"].value;
-      if (x == "") {
+      let x = document.forms["myForm"]["name"].value;
+      let y= document.forms["myForm"]["email"].value;
+      let z=document.forms["myForm"]["subject"].value;
+      if (x == ""|| y=='' || z=='') {
         alert("Name must be filled out");
         return false;
       }
